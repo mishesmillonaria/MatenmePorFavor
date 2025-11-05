@@ -240,7 +240,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 981646170}
-  - component: {fileID: 981646171}
+  - component: {fileID: 981646173}
+  - component: {fileID: 981646172}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -263,7 +264,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &981646171
+--- !u!114 &981646172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,13 +273,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 981646169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e7f4e8cd31d9244aec22cf60b2b4ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 3796e6e8d025240498f8853ffd6a1321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntaArriba: {fileID: 1180545381}
-  puntaAbajo: {fileID: 2002559744}
-  caramelo: {fileID: 1509879172}
-  distanciaMaxima: 1
+  cableAbajoPrefab: {fileID: 6043131909467749174, guid: b0c4bd3796fd1964fa0b536e57281425, type: 3}
+  posicion: {x: 0, y: -3, z: 0}
+--- !u!114 &981646173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981646169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2524303b757d84e94b99aa7ddea78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cableArribaPrefab: {fileID: 1830630525383418774, guid: d16dd45ed4fed3942bb8c34e399e0fff, type: 3}
+  posicion: {x: 0, y: 3, z: 0}
 --- !u!1 &1180545380
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,9 +302,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1180545381}
   - component: {fileID: 1180545382}
+  - component: {fileID: 1180545383}
+  - component: {fileID: 1180545384}
   m_Layer: 0
   m_Name: puntaArriba
-  m_TagString: Untagged
+  m_TagString: ExtremoArriba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,7 +355,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -356,6 +371,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1180545383
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180545380}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1180545384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180545380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588fbe684ce9275458121632a6e9918d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _caramelo: {fileID: 3493662837190441779, guid: 0d6fd5b0b0eec384e81649f3e5de4efe, type: 3}
+  _tag: ExtremoArriba
 --- !u!1001 &1484804909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413,11 +469,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d6fd5b0b0eec384e81649f3e5de4efe, type: 3}
---- !u!1 &1509879172 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3493662837190441779, guid: 0d6fd5b0b0eec384e81649f3e5de4efe, type: 3}
-  m_PrefabInstance: {fileID: 1484804909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2002559743
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,9 +479,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2002559744}
   - component: {fileID: 2002559745}
+  - component: {fileID: 2002559746}
+  - component: {fileID: 2002559747}
   m_Layer: 0
   m_Name: puntaAbajo
-  m_TagString: Untagged
+  m_TagString: ExtremoAbajo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +532,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -495,6 +548,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &2002559746
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002559743}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2002559747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002559743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588fbe684ce9275458121632a6e9918d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _caramelo: {fileID: 3493662837190441779, guid: 0d6fd5b0b0eec384e81649f3e5de4efe, type: 3}
+  _tag: ExtremoAbajo
 --- !u!1 &2004930906
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,28 +599,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2004930909}
   - component: {fileID: 2004930908}
-  - component: {fileID: 2004930907}
   m_Layer: 0
-  m_Name: cableAriba
+  m_Name: cableArriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2004930907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004930906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad2524303b757d84e94b99aa7ddea78e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cableArribaPrefab: {fileID: 2004930906}
-  posicion: {x: 0, y: 3, z: 0}
 --- !u!212 &2004930908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -588,8 +667,8 @@ Transform:
   m_GameObject: {fileID: 2004930906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.52, y: 2.66, z: 0}
-  m_LocalScale: {x: 5, y: 0.4, z: 1}
+  m_LocalPosition: {x: 7.52, y: 2.5326, z: 0}
+  m_LocalScale: {x: 4.918, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1180545381}
@@ -625,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3796e6e8d025240498f8853ffd6a1321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cableAbajoPrefab: {fileID: 0}
+  cableAbajoPrefab: {fileID: 6043131909467749174, guid: b0c4bd3796fd1964fa0b536e57281425, type: 3}
   posicion: {x: 0, y: -3, z: 0}
 --- !u!212 &2063200142
 SpriteRenderer:
@@ -688,8 +767,8 @@ Transform:
   m_GameObject: {fileID: 2063200140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.52, y: -2.63, z: 0}
-  m_LocalScale: {x: 5, y: 0.4, z: 1}
+  m_LocalPosition: {x: 7.52, y: -2.5944, z: 0}
+  m_LocalScale: {x: 4.7650504, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2002559744}

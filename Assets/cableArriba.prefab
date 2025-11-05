@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 7000028083918461620}
   - component: {fileID: 8922400716564486994}
   - component: {fileID: 1129028356426695797}
-  - component: {fileID: 33212163452533726}
   - component: {fileID: 3736117853577607878}
-  - component: {fileID: 3662790538632516761}
   m_Layer: 0
   m_Name: cableArriba
   m_TagString: Cable
@@ -134,22 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &33212163452533726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830630525383418774}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e7f4e8cd31d9244aec22cf60b2b4ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puntaArriba: {fileID: 0}
-  puntaAbajo: {fileID: 0}
-  caramelo: {fileID: 0}
-  distanciaMaxima: 1
 --- !u!50 &3736117853577607878
 Rigidbody2D:
   serializedVersion: 4
@@ -177,22 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &3662790538632516761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830630525383418774}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa012845264ecf4596fde886461da63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cableArriba: {fileID: 0}
-  cableAbajo: {fileID: 0}
-  puntaArriba: {fileID: 0}
-  puntaAbajo: {fileID: 0}
 --- !u!1 &6062188408849126069
 GameObject:
   m_ObjectHideFlags: 0
