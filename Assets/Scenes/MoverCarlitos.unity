@@ -308,7 +308,7 @@ MonoBehaviour:
   puntaArriba: {fileID: 2004930909}
   puntaAbajo: {fileID: 2063200143}
   caramelo: {fileID: 3493662837190441779, guid: 0d6fd5b0b0eec384e81649f3e5de4efe, type: 3}
-  distMaxima: 4
+  distMaxima: 1
 --- !u!1 &1180545380
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +403,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -523,7 +523,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

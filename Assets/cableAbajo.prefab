@@ -94,7 +94,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 6570464637432374858}
   - component: {fileID: 7657877794317502835}
   - component: {fileID: 8318606506428569305}
-  - component: {fileID: 7429892472825339570}
   m_Layer: 0
   m_Name: cableAbajo
   m_TagString: Cable
@@ -293,19 +292,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a79c4e23d4d4b64bfa5fa9e6671a460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7429892472825339570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6043131909467749174}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e7f4e8cd31d9244aec22cf60b2b4ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puntaArriba: {fileID: 0}
-  puntaAbajo: {fileID: 0}
-  caramelo: {fileID: 0}
-  distMaxima: 1
