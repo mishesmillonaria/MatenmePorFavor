@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2570991229502933999}
   - component: {fileID: 8847298588900985328}
+  - component: {fileID: 8583184438027841543}
+  - component: {fileID: 6974975222698810206}
   m_Layer: 0
   m_Name: puntaAbajo
-  m_TagString: Untagged
+  m_TagString: ExtremoAbajo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +63,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.010855794, y: 0.37655705}
@@ -77,6 +79,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.891443, y: 0.2468859}
   m_EdgeRadius: 0
+--- !u!50 &8583184438027841543
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105295137554972438}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &6974975222698810206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105295137554972438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588fbe684ce9275458121632a6e9918d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _caramelo: {fileID: 3493662837190441779, guid: 0d6fd5b0b0eec384e81649f3e5de4efe, type: 3}
+  _tag: ExtremoAbajo
 --- !u!1 &6043131909467749174
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,4 +308,4 @@ MonoBehaviour:
   puntaArriba: {fileID: 0}
   puntaAbajo: {fileID: 0}
   caramelo: {fileID: 0}
-  distanciaMaxima: 1
+  distMaxima: 1

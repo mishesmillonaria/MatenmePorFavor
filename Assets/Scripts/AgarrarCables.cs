@@ -7,7 +7,7 @@ public class AgarrarCables : MonoBehaviour
     public Transform puntaArriba;        
     public Transform puntaAbajo;         
     public GameObject caramelo;          
-    public float distMaxima = 1f;   
+    public float distMaxima = 8f;   
 
     private Vector3 posArriba;  
     private Vector3 posAbajo;   
