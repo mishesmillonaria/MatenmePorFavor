@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 28e7f4e8cd31d9244aec22cf60b2b4ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - puntaArriba: {instanceID: 0}
+  - puntaAbajo: {instanceID: 0}
+  - caramelo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
