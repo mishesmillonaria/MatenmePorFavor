@@ -4,13 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - suelo
-  - cable uno
-  - Carlos
+  - enemigo
   - Cable
-  - Mano
-  - ExtremoArriba
   - ExtremoAbajo
+  - ExtremoArriba
+  - Cables
   layers:
   - Default
   - TransparentFX
@@ -18,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - enemigos
+  - fondo
   - 
   - 
   - 
@@ -47,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FONDO
+    uniqueID: 38889775
+    locked: 0
+  - name: ENEMIGOS
+    uniqueID: 1740437479
+    locked: 0
+  - name: UI
+    uniqueID: 1444035685
     locked: 0

@@ -7,7 +7,7 @@ public class MoverCableAbajo : MonoBehaviour
     public GameObject cableAbajoPrefab;
     private int _contador;
     private int _max = 5;
-   [ SerializeField] private Vector3 posicion = new (0, -3f, 0);
+   [ SerializeField] private Vector3 posicion = new (0, 106f, 0);
 
     void Update()
     {

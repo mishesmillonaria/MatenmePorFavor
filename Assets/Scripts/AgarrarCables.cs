@@ -53,22 +53,3 @@ public class AgarrarCables : MonoBehaviour
     }
 }
 
-
-
-
-
-
-
-
-
-//
-//
-//
-//if (_contador <= _max)
-//
-//Vector3 nuevaPos = posicion + new Vector3(0 + _contador, 0, 0);
-//El Instantiate 
-//_contador++;
-//
-//
-//
